@@ -1,8 +1,22 @@
+
 * {
     border: 1px solid red;
 }
 
+@font-face {
+    font-family: 'montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./ArtAssets/fonts/montserrat.regular.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./ArtAssets/fonts/montserrat.bold.woff) format('woff');
+  }
 body {
+    background-color: #f7f7ed;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -11,39 +25,97 @@ body {
     border: none;
     overflow: scroll;
     overflow-x: hidden;
-    font-family: 'Arial', sans-serif;
+    font-family: montserrat;
+    align-items: center;
+    touch-action: pan-y;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    body {
+        background-position: center;
+    }
+}
+#home-body {
+    background-image: url(./ArtAssets/elements/heroBackground.png);
+    background-size: cover;
+}
+
+h1 {
+    font-family: montserrat;
+    font-size: 32px;
+    color: #296610;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+.dividing-line {
+    height: 2px;
+    width: 400px;
+    background-color: #296610;
+    margin-bottom: 20px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .dividing-line {
+       width: 270px;
+    }
 }
 header {
     display: flex;
     position: fixed;
-    box-sizing: border-box;
-    background-color: white;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
+    background-color: #f7f7ed;
+    box-shadow: 5px 5px 20px #0000005d;
     height: 75px;
+    width: 100%;
     z-index: 9999;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
     header {
-        justify-content: space-between;
+        height: 175px;
+        width: 100%;
+        position: absolute;
     }
 }
-#header-logo {
-    height: 100%;
-    width: 10%;
+#header-contents {
+    display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 75px;
+    z-index: 9999;
+
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
-    #header-logo {
-        width: 25%;
+    #header-contents {
+        display: none;
     }
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #header-contents-mobile {
+        width: 100%;
+    }
+}
+#header-logo {
+    height: 80%;
+    margin-left: 20px;
+    cursor: pointer;
 }
 nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 20%;
+    width: 30%;
+    font-family: montserrat;
+    margin-right: 20px;
 }
 
 nav ul {
@@ -58,7 +130,16 @@ nav ul {
 nav li {
     height: 100%;
     align-items: center;
+}
+nav a {
+    color: #231507;
     text-decoration: none;
+}
+nav a:hover {
+    color: #218326;
+}
+nav a:active {
+    color: #155d19;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
@@ -66,19 +147,55 @@ nav li {
         display: none;
     }
 }
-#nav2 {
- width: 10%;
+#header-contents-mobile {
+    display: none;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
-    #nav2 {
-        width: 25%;
+    #header-contents-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
-#nav2 img {
-    height: 80%;
-    width: 60%;
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #header-contents-mobile img {
+        position: absolute;
+        height: 75%;
+        top: 13%;
+    }
 }
+#mobile-menu-icon {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    right: 3%;
+    top: 5%;
+}
+#mobile-menu-container {
+    display: none;
+}
+#mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #f7f7ed;
+    height: 165px;
+    right: -2%;
+    top: 40%;
+    border: solid 2px #7c746b;
+    border-radius: 5px;
+}
+#mobile-menu li {
+    list-style: none;
+    margin: 5px;
+}
+
+
 /*=======================================================================*/
 
 footer {
@@ -86,8 +203,10 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 150px;
+    height: 20vh;
     margin-top: 20px;
+    background-image: url(./ArtAssets/elements/footerBackground.png);
+    background-size: cover;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
@@ -112,6 +231,8 @@ footer div {
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     width: 100%;
     height: auto;
@@ -142,43 +263,148 @@ main {
 }
 
 
-/*=======================================================================*/
+
+/*==========================================ABOUT PAGE==============================================*/
+
+
+#meet-the-moose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    width: 100%;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #meet-the-moose {
+        width: 90%;
+        height: 1000px;
+        margin-top: 220px;
+    }
+}
+#meet-the-moose-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bio-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .bio-container{
+        flex-direction: column;
+    }
+}
+.meet-the-moose-bio {
+    display: block;
+    height: 600px;
+    width: 450px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .meet-the-moose-bio {
+        height: 400px;
+        width: 100%;
+    }
+}
+#meet-the-moose-blurb {
+    text-indent: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/*==================================GARDENING/FLORAL PAGES=====================================*/
 
 
 
 #hero {
     display: flex;
+    flex-direction: column;
     box-sizing: border-box;
-    height: 60vh;
+    height: 75vh;
     width: 100%;
-
+    align-items: center;
+    justify-content: center;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
     #hero {
-
+height: 100vh;
     }
 }
-
+#hero-intro {
+    height: 150px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #hero-intro {
+        display: none;
+    }
+}
+#hero-intro-mobile {
+    display: none;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #hero-intro-mobile {
+        display: flex;
+        height: 130px;
+        margin-top: 70px;
+    }
+}
 #hero-content {
     display: flex;
-    flex-direction: column;
     position: relative;
-    height: 20%;
-    width: 30%;
+    height: 40%;
+    width: 80%;
     align-items: center;
-    left: 50%;
-    top: 40%;
+    justify-content: center;
 }
-
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #hero-content {
+        flex-direction: column;
+        height: 60%;           
+    }
+}
+#hero-content img {
+    height: 300px;
+    margin: 20px;
+    cursor: pointer;
+}
+/*Mobile */
+@media only screen and (max-width: 480px) {
+    #hero-content img {
+        height: 200px;
+        margin: 10px;           
+    }
+}
 .headline {
-    font-size: 24px;
-    font-weight: bold;
+    height: 30px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .headline {
+        height: 24px;
+    }
 }
 .text {
-
+font-size: 14pt;
 }
-
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .text {
+        font-size: 12pt;
+    }
+}
 
 /*=======================================================================*/
 
@@ -189,12 +415,30 @@ main {
     align-items: center;
     justify-content: space-around;
     box-sizing: border-box;
-    height: 50vh;
+    height: 500px;
+    z-index: 100;
+    margin-top: 500px;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
     #value-propositions {
+        display: none;
+    }
+}
+#value-propositions-mobile {
+    display: none;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #value-propositions-mobile {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        box-sizing: border-box;
+        height: 90vh;
+        z-index: 100;
+        margin-top: 35vh;
     }
 }
 .value-prop-container {
@@ -206,34 +450,50 @@ main {
     height: 70%;
     width: 25%;
 }
+#value-propositions img {
+    width: 350px;
+}
 /*Mobile */
 @media only screen and (max-width: 767px) {
-    .value-prop-container {
-        height: 30%;
-        width: 90%;
+    #value-propositions img {
+        display: none;
     }
 }
-
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .value-prop-container-mobile img {
+        width: 350px;
+    }
+}
 
 /*=======================================================================*/
 
 
 .content-container {
+    font-family: montserrat;
     display: flex;
     align-items: center;
     justify-content: space-around;
     box-sizing: border-box;
-    height: 50vh;
+    height: 600px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .content-container {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
 }
 .content {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    height: 70%;
-    width: 90%;
+    height: 400px;
+
 }
+.text {
+    text-indent: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
 
 
 /*=======================================================================*/
@@ -275,3 +535,290 @@ main {
     height: 50px;
     width: 150px;
 }
+
+#item-g1 {
+    background-image: url(./ArtAssets/images/gardening/Gardening4.png);
+    background-position: 30% 70%;
+    background-size: 220%;
+}
+#item-g2 {
+    background-image: url(./ArtAssets/images/gardening/Gardening9.png);
+    background-position: 0% 60%;
+    background-size: 120%;
+}
+#item-g3 {
+    background-image: url(./ArtAssets/images/gardening/Gardening15.png);
+    background-position: 20% 80%;
+    background-size: 140%;
+}
+
+
+
+/*==========================================GARDENING PAGE==============================================*/
+
+
+#gardening-hero {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 900px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./ArtAssets/elements/gardeningHeroImage.png);
+    background-size: cover;
+    background-position: center;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #gardening-hero {
+        height: 30vh;
+        top: 25%;
+    }
+}
+#gardening-hero-content {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #gardening-hero-content {
+        width: 90%;
+        top: 20%;
+    }
+}
+.gardening-headline {
+    height: 130px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .gardening-headline {
+        width: 90%;
+    }
+}
+#gardening-image1 {
+    height: 350px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #gardening-image1 {
+        height: 180px;
+    }
+}
+
+
+/*==========================================EXPERT TIP==============================================*/
+
+
+
+#expert-tip {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 350px;
+    background-color: white;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 20px #0000005d;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #expert-tip {
+        width: 90%;
+        height: 650px;   
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #tip-container1 {
+        margin: 30px 0 0 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+#tip-container2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #tip-container2 {
+        display: flex;
+        width: 100%;
+        height: 600px; 
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;  
+    }
+}
+#tip-container2 p {
+    max-width: 550px;
+    line-height: 1.5;
+    text-indent: 20px;
+    text-align: center;
+    margin: 15px;
+}
+#flower-bucket {
+    height: 250px;
+    margin-left: 50px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #flower-bucket {
+        height: 140px;
+        width: 180px;
+        margin-left: 0px;
+    }
+}
+
+
+
+/*==========================================SET UP CONSULTATION==============================================*/
+
+
+.set-up-consultation {
+    display: flex;
+    position: absolute;
+    width: 313px;
+    height: 53px;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    border-radius: 15px;
+    background-color: #2094af;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: montserrat;
+    color: white;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .set-up-consultation {
+        width: 250px;
+        height: 42px;
+        border-radius: 10px;
+        font-size: 20px;
+        transform: translate(-50%,-90%);
+    }
+}
+
+/*==========================================FENCE==============================================*/
+
+
+#fence {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 100vw;
+    top: 1900px;
+    background-image: url(./ArtAssets/elements/fence.png);
+    background-size: cover;
+    background-position: center;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #fence {
+        display: none; 
+    }
+}
+
+/*==========================================SEE OUR STUFF==============================================*/
+
+
+#see-our-stuff {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 100%;
+    top: 2900px;
+    justify-content: center;
+    align-items: center;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #see-our-stuff {
+        width: 90%;
+        height: 750px;   
+    }
+}
+#gallery-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90%;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #gallery-preview-container {
+    max-width: 100%;
+    }
+}
+.gallery-item {
+    display: flex;
+    height: 350px;
+    width: 350px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .gallery-item {
+    height: 167px;
+    width: 167px;
+    }
+}
+
+/*==========================================FEATURED SERVICES==============================================*/
+
+
+#featured-services {
+    display: flex;
+    height: 500px;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 5px 5px 20px #0000005d;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #featured-services {
+        height: 200px;   
+    }
+}
+
+/*==========================================TESIMONIALS==============================================*/
+
+#testimonials {
+    height: 800px;
+    width: 90%;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #testimonials {
+        height: 400px;   
+    }
+}
+
+
+/*==========================================CONTACT==============================================*/
+
+
+#contact {
+    height: 75vh;
+    width: 100%;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #contact { 
+        
+    }
+} 
