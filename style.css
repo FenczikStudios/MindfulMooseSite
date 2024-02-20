@@ -21,6 +21,8 @@ body {
     background-color: #f7f7ed;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -41,15 +43,22 @@ body {
     background-image: url(./ArtAssets/elements/heroBackground.png);
     background-size: cover;
 }
-
 h1 {
+    display: flex;
     font-family: montserrat;
     font-size: 32px;
     color: #296610;
+    margin: 10px;
 }
 h2 {
+    display: flex;
     font-family: montserrat;
     color: #296610;
+    margin: 0;
+}
+p {
+    display: flex;
+    margin: 0;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
@@ -59,7 +68,7 @@ h2 {
 }
 .dividing-line {
     height: 2px;
-    width: 400px;
+    width: 80%;
     background-color: #296610;
     margin-bottom: 20px;
 }
@@ -81,12 +90,13 @@ header {
     z-index: 9999;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     header {
         height: 175px;
         width: 100%;
     }
 }
+
 #header-contents {
     display: flex;
     position: fixed;
@@ -99,13 +109,19 @@ header {
 
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
+    #header-contents {
+        width: 100vw;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #header-contents {
         display: none;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #header-contents-mobile {
         width: 100%;
     }
@@ -114,6 +130,12 @@ header {
     height: 80%;
     margin-left: 20px;
     cursor: pointer;
+}
+/*Mobile */
+@media only screen and (max-width: 850px) {
+    #header-logo {
+        height: 60%;
+    }
 }
 nav {
     display: flex;
@@ -148,7 +170,7 @@ nav a:active {
     color: #155d19;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #nav1 {
         display: none;
     }
@@ -157,7 +179,7 @@ nav a:active {
     display: none;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #header-contents-mobile {
         display: flex;
         justify-content: center;
@@ -165,7 +187,7 @@ nav a:active {
     }
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #header-contents-mobile img {
         position: absolute;
         height: 75%;
@@ -185,20 +207,29 @@ nav a:active {
 #mobile-menu-container {
     display: none;
 }
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #mobile-menu-icon {
+      display: flex;  
+    }
+}
 #mobile-menu {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     position: absolute;
     background-color: #f7f7ed;
-    height: 165px;
+    height: 145px;
+    width: 120px;
     right: -2%;
-    top: 40%;
+    top: 36%;
     border: solid 2px #7c746b;
     border-radius: 5px;
 }
 #mobile-menu li {
+    display: flex;
     list-style: none;
-    margin: 5px;
+    height: auto;
 }
 
 
@@ -211,26 +242,74 @@ footer {
     width: 100%;
     height: 20vh;
     margin-top: 20px;
-    background-image: url(./ArtAssets/elements/footerBackground.png);
-    background-size: cover;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
     footer {
         height: 100px;
-        margin-top: 15px;
+        margin-top: 30px;
     }
+}
+#index-footer {
+    background-image: url(./ArtAssets/elements/footerBackground.png);
+    background-size: cover;
 }
 footer div {
     height: 20px;
     width: 25%;
     font-size: 10pt;
+    margin-top: 140px;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    footer div {
+        font-size: 8pt;
+        margin-top: 20px;
+    }
 }
 #footer-text {
     width: 40%;
 }
-
-
+.moose-footer-img {
+    display: flex;
+    position: absolute;
+    height: 600px;
+    width: 100vw;
+    background-image: url(./ArtAssets/elements/MooseFooterImg.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .moose-footer-img {
+        height: 330px;
+    }
+}
+#moose-footer-gardening {
+    bottom: -130%;
+}
+/*Mobile */
+@media only screen and (max-width: 850px) {
+    #moose-footer-gardening {
+        bottom: -535%;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
+    #moose-footer-gardening {
+        bottom: -284%;
+    }
+}
+#moose-footer-contact {
+    bottom: -4%;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    #moose-footer-contact {
+        bottom: -32%;
+    }
+}
 /*=======================================================================*/
 
 
@@ -248,13 +327,6 @@ main {
     padding: 0; 
 }
 
-/*Desktop */
-@media only screen and (min-width: 1200px) {
-    main {
-
-    }
-}
-
 /*Tablet */
 @media only screen and (max-width: 1199px) and (min-width: 768px) {
     main {
@@ -263,9 +335,9 @@ main {
 }
 
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     main {
-
+        max-width: 400px;
     }
 }
 
@@ -342,9 +414,9 @@ main {
     justify-content: center;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #hero {
-height: 100vh;
+        height: 100vh;
     }
 }
 #hero-intro {
@@ -353,6 +425,12 @@ height: 100vh;
 /*Mobile */
 @media only screen and (max-width: 767px) {
     #hero-intro {
+        height: 70px;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
+    #hero-intro {
         display: none;
     }
 }
@@ -360,7 +438,7 @@ height: 100vh;
     display: none;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #hero-intro-mobile {
         display: flex;
         height: 130px;
@@ -375,8 +453,9 @@ height: 100vh;
     align-items: center;
     justify-content: center;
 }
+
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #hero-content {
         flex-direction: column;
         height: 60%; 
@@ -389,12 +468,20 @@ height: 100vh;
     cursor: pointer;
 }
 /*Mobile */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 850px) {
+    #hero-content img {
+        height: 180px;  
+        margin: 70px 0 0 0px;       
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #hero-content img {
         height: 240px;  
         margin: -10px;       
     }
 }
+
 .headline {
     height: 30px;
 }
@@ -429,7 +516,13 @@ font-size: 14pt;
     margin-top: 500px;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
+    #value-propositions {
+        margin-top: 100px;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #value-propositions {
         display: none;
     }
@@ -438,7 +531,7 @@ font-size: 14pt;
     display: none;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #value-propositions-mobile {
         display: flex;
         flex-direction: column;
@@ -464,9 +557,15 @@ font-size: 14pt;
     width: 350px;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #value-propositions img {
         display: none;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 850px) {
+    #value-propositions img {
+        width: 220px;
     }
 }
 /*Mobile */
@@ -486,12 +585,22 @@ font-size: 14pt;
     justify-content: space-around;
     box-sizing: border-box;
     height: 600px;
+    width: 90%;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
+    .content-container {
+        height: 400px;
+        width: 80%;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     .content-container {
         flex-direction: column-reverse;
         width: 90%;
+        height: 600px;
+        margin-top: 50px;
     }
 }
 .content {
@@ -576,7 +685,14 @@ font-size: 14pt;
     background-position: center;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
+    #gardening-hero {
+        height: 80vh;
+        top: 15%;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #gardening-hero {
         height: 37vh;
         top: 25%;
@@ -648,14 +764,21 @@ font-size: 14pt;
     box-shadow: 5px 5px 20px #0000005d;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
+    #expert-tip {
+        width: 100%;
+        height: 350px;   
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #expert-tip {
         width: 90%;
         height: 450px;   
     }
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #tip-container1 {
         margin: 30px 0 0 0;
         justify-content: center;
@@ -664,13 +787,12 @@ font-size: 14pt;
 }
 #tip-container2 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    margin: -20px 0 40px 0;
+    margin: -10px 0 40px 0;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #tip-container2 {
         display: flex;
         width: 100%;
@@ -678,7 +800,7 @@ font-size: 14pt;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        margin: 0 0 20px 0; 
+        margin: 0 0 40px 0; 
          
     }
 }
@@ -686,21 +808,27 @@ font-size: 14pt;
     max-width: 550px;
     line-height: 2;
     text-align: center;
-    margin: 15px;
+    margin: 10px;
 }
 #flower-bucket {
     height: 250px;
     margin-left: 50px;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
+    #flower-bucket {
+        height: 220px;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #flower-bucket {
         height: 140px;
         width: 180px;
         margin-left: 0px;
+        margin-bottom: 15px;
     }
 }
-
 
 
 /*==========================================SET UP CONSULTATION==============================================*/
@@ -712,7 +840,7 @@ font-size: 14pt;
     width: 313px;
     height: 53px;
     left: 50%;
-    transform: translate(-50%,-10%);
+    transform: translate(-50%,10%);
     border-radius: 15px;
     background-color: #2094af;
     justify-content: center;
@@ -724,13 +852,13 @@ font-size: 14pt;
     z-index: 200;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     .set-up-consultation {
         width: 250px;
         height: 42px;
         border-radius: 10px;
         font-size: 20px;
-        transform: translate(-50%,-90%);
+        transform: translate(-50%,-80%);
     }
 }
 
@@ -843,13 +971,13 @@ font-size: 14pt;
 /*==========================================TESIMONIALS==============================================*/
 
 #testimonials {
-    height: 300px;
+    height: 600px;
     width: 90%;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 390px) {
     #testimonials {
-        height: 200px;   
+        height: 300px;   
     }
 }
 
@@ -873,7 +1001,15 @@ font-size: 14pt;
     background-position: center;
 }
 /*Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
+    #florist-hero {
+        height: 60vh;
+        top: 20%;
+        background-position: 56%;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #florist-hero {
         height: 40vh;
         top: 25%;
@@ -917,28 +1053,28 @@ font-size: 14pt;
 .dropdown {
     display: flex;
     position: absolute;
-    top: -160%; /* Initially hide the dropdowns */
+    top: -250%; /* Initially hide the dropdowns */
     width: 80%;
     max-width: 1200px;
     height: auto;
     background-color: white;
     z-index: 200;  
     border-radius: 20px;
-    transition: top 1s ease; /* Transition for smooth movement */
+    transition: top 1.5s ease; /* Transition for smooth movement */
     box-shadow: 5px 5px 20px #0000005d;
 }
 
 /* Mobile-specific styles */
 @media only screen and (max-width: 767px) {
     .dropdown { 
-        top: -180%;
+        top: -350%;
         height: auto;
         width: 100%;
+        max-width: 400px;
     }
 }
 .dropdown-header {
     display: flex;
-    justify-content: center;
 }
 .toggle-button {
     position: absolute;
@@ -955,14 +1091,21 @@ font-size: 14pt;
 .dropdown-contents {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
     margin-top: 120px;
     height: 85%;
     width: 100%;
     margin-bottom: 50px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
+    .dropdown-contents { 
+        height: 63%;
+        width: 100%;
+        margin-top: 100px;
+    }
+}
+@media only screen and (max-width: 390px) {
     .dropdown-contents { 
         height: 63%;
         width: 100%;
@@ -973,22 +1116,34 @@ font-size: 14pt;
 .dropdown-gallery {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
+    margin: 20px 0 20px 0;
 }
 @media only screen and (max-width: 767px) {
     .dropdown-gallery { 
         width: 100%;
     }
 }
+.dropdown-gallery-words-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 10px 0 0 0px;
+}
+@media only screen and (max-width: 767px) {
+    .dropdown-gallery-words-container{
+        width: auto;
+    }
+}
 .dropdown-gallery-header {
     display: flex;
-    justify-content: center;
     font-size: 14px;
+    margin: 0 0 10px 0;
 }
 .dropdown-gallery-item {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 @media only screen and (max-width: 767px) {
@@ -1001,7 +1156,7 @@ font-size: 14pt;
 .dropdown-image {
     display: flex;
     height: 300px;
-    width: 300px;
+    width: 500px;
 }
 @media only screen and (max-width: 767px) {
     .dropdown-image { 
@@ -1019,52 +1174,101 @@ font-size: 14pt;
 
 #img-small-bouquet {
     background-image: url(./ArtAssets/images/florist/WebRdy/SmallBouquet2.png);
-    background-size: 120%;
-    background-position: 50% 15%;
+    background-size: 100%;
+    background-position: 50% 0%;
 }
-#img-small-centerpiece {
-    background-image: url(./ArtAssets/images/florist/WebRdy/smallCenterpiece1.png);
+#img-medium-bouquet {
+    background-image: url(./ArtAssets/images/florist/WebRdy/MediumBouquet1.png);
+    background-size: 130%;
+    background-position: 50% 30%;
+}
+#img-large-bouquet {
+    background-image: url(./ArtAssets/images/florist/Stock/largeBouquet.png);
     background-size: 110%;
-    background-position: 50% 50%;
+    background-position: 50% 40%;
 }
-#img-medium-centerpiece {
-    background-image: url(./ArtAssets/images/florist/WebRdy/MediumCenterpiece1.png);
+
+@media only screen and (max-width: 767px) {
+    #img-small-bouquet {
+        background-image: url(./ArtAssets/images/florist/WebRdy/SmallBouquet2.png);
+        background-size: 100%;
+        background-position: 50% 20%;
+    }
+    #img-medium-bouquet {
+        background-image: url(./ArtAssets/images/florist/WebRdy/MediumBouquet1.png);
+        background-size: 115%;
+        background-position: 50% 30%;
+    }
+    #img-large-bouquet {
+        background-image: url(./ArtAssets/images/florist/Stock/largeBouquet.png);
+        background-size: 110%;
+        background-position: 50% 55%;
+    }
+}
+
+
+
+#img-small-centerpiece {
+    background-image: url(./ArtAssets/images/florist/Stock/small\ centerpiece.png);
     background-size: 100%;
     background-position: 50% 50%;
 }
+#img-medium-centerpiece {
+    background-image: url(./ArtAssets/images/florist/WebRdy/smallCenterpiece1.jpg);
+    background-size: 110%;
+    background-position: 50% 50%;
+}
+#img-large-centerpiece {
+    background-image: url(./ArtAssets/images/florist/WebRdy/MediumCenterpiece1.png);
+    background-size: 100%;
+    background-position: 50% 40%;
+}
 
-
+@media only screen and (max-width: 767px) {
+    #img-small-centerpiece {
+        background-image: url(./ArtAssets/images/florist/Stock/small\ centerpiece.png);
+        background-size: 110%;
+        background-position: 50% 50%;
+    }
+    #img-medium-centerpiece {
+        background-image: url(./ArtAssets/images/florist/WebRdy/smallCenterpiece1.jpg);
+        background-size: 100%;
+        background-position: 50% 30%;
+    }
+    #img-large-centerpiece {
+        background-image: url(./ArtAssets/images/florist/WebRdy/MediumCenterpiece1.png);
+        background-size: 100%;
+        background-position: 50% 30%;
+    }
+}
 
 #img-coursages {
     background-image: url(./ArtAssets/images/florist/WebRdy/Coursage1.png);
-    background-size: 135%;
-    background-position: 70% 53%;
+    background-size: 120%;
+    background-position: 75% 53%;
 }
+#img-boutonniere {
+    background-image: url(./ArtAssets/images/florist/Stock/boutoniere.jpg);
+    background-size: 200%;
+    background-position: 65% 63%;
+}
+#img-custom {
+    background-image: url(./ArtAssets/images/florist/Custom/custom1.png);
+    background-size: 140%;
+    background-position: 40% 53%;
+}
+
 @media only screen and (max-width: 767px) {
     #img-coursages { 
         background-size: 110%;
         background-position: 90% 35%;
     }
-}
 #img-boutoniere {
-    background-image: url(./ArtAssets/images/florist/Stock/boutoniere.jpg);
-    background-size: 300%;
-    background-position: 65% 63%;
-}
-@media only screen and (max-width: 767px) {
-    #img-boutoniere {
         background-image: url(./ArtAssets/images/florist/Stock/boutoniere.jpg);
         background-size: 200%;
         background-position: 65% 56%;
     }
-}
 #img-custom {
-    background-image: url(./ArtAssets/images/florist/Custom/custom1.png);
-    background-size: 170%;
-    background-position: 40% 63%;
-}
-@media only screen and (max-width: 767px) {
-    #img-custom {
         background-image: url(./ArtAssets/images/florist/Custom/custom1.png);
         background-size: 150%;
         background-position: 40% 53%;

@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var dropdown = document.getElementById(dropdownId);
           if (dropdown) {
               // Toggle the top position to make the dropdown appear or disappear
-              dropdown.style.top = dropdown.style.top === '0' ? '-180%' : '0';
+              dropdown.style.top = dropdown.style.top === '0' ? '-350%' : '0';
               
               // Stop the event propagation to prevent the click event from reaching the document
               event.stopPropagation();
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
           var dropdown = document.getElementById(dropdownId);
           if (dropdown && !dropdown.contains(event.target) && !button.contains(event.target)) {
-              dropdown.style.top = '-180%'; // Close the dropdown
+              dropdown.style.top = '-350%'; // Close the dropdown
           }
       });
   });
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
   closeButtons.forEach(function(closeButton) {
       closeButton.addEventListener("click", function(event) {
           var dropdown = closeButton.closest(".dropdown");
-          dropdown.style.top = '-180%'; // Close the dropdown
+          dropdown.style.top = '-350%'; // Close the dropdown
           event.stopPropagation(); // Stop the event propagation to prevent the click event from reaching the document
       });
   });
