@@ -3,6 +3,8 @@
     border: 1px solid red;
 }
 */
+
+
 @font-face {
     font-family: 'montserrat';
     font-style: normal;
@@ -45,10 +47,14 @@ h1 {
     font-size: 32px;
     color: #296610;
 }
+h2 {
+    font-family: montserrat;
+    color: #296610;
+}
 /*Mobile */
 @media only screen and (max-width: 767px) {
     h1 {
-        font-size: 24px;
+        font-size: 30px;
     }
 }
 .dividing-line {
@@ -69,6 +75,7 @@ header {
     justify-content: center;
     background-color: #f7f7ed;
     box-shadow: 5px 5px 20px #0000005d;
+    top: 0;
     height: 75px;
     width: 100%;
     z-index: 9999;
@@ -78,7 +85,6 @@ header {
     header {
         height: 175px;
         width: 100%;
-        position: absolute;
     }
 }
 #header-contents {
@@ -217,10 +223,11 @@ footer {
 }
 footer div {
     height: 20px;
-    width: 10%;
+    width: 25%;
+    font-size: 10pt;
 }
 #footer-text {
-    width: 50%;
+    width: 40%;
 }
 
 
@@ -372,7 +379,8 @@ height: 100vh;
 @media only screen and (max-width: 767px) {
     #hero-content {
         flex-direction: column;
-        height: 60%;           
+        height: 60%; 
+        margin-top: 20px;          
     }
 }
 #hero-content img {
@@ -383,8 +391,8 @@ height: 100vh;
 /*Mobile */
 @media only screen and (max-width: 480px) {
     #hero-content img {
-        height: 200px;
-        margin: 10px;           
+        height: 240px;  
+        margin: -10px;       
     }
 }
 .headline {
@@ -394,6 +402,7 @@ height: 100vh;
 @media only screen and (max-width: 767px) {
     .headline {
         height: 24px;
+        margin-left: 25px;
     }
 }
 .text {
@@ -449,6 +458,7 @@ font-size: 14pt;
     justify-content: center;
     height: 70%;
     width: 25%;
+    cursor: pointer;
 }
 #value-propositions img {
     width: 350px;
@@ -485,13 +495,20 @@ font-size: 14pt;
     }
 }
 .content {
+    display: flex;
+    flex-direction: column;
     height: 400px;
+    justify-content: space-around;
 
+}
+.content img {
+    align-self: flex-start;
 }
 .text {
     text-indent: 20px;
-    line-height: 1.7;
+    line-height: 2;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 
@@ -606,12 +623,12 @@ font-size: 14pt;
     background-size: 220%;
 }
 #item-g2 {
-    background-image: url(./ArtAssets/images/gardening/Gardening9.png);
+    background-image: url();
     background-position: 0% 60%;
     background-size: 120%;
 }
 #item-g3 {
-    background-image: url(./ArtAssets/images/gardening/Gardening15.png);
+    background-image: url();
     background-position: 20% 80%;
     background-size: 140%;
 }
@@ -634,7 +651,7 @@ font-size: 14pt;
 @media only screen and (max-width: 767px) {
     #expert-tip {
         width: 90%;
-        height: 650px;   
+        height: 450px;   
     }
 }
 /*Mobile */
@@ -648,25 +665,26 @@ font-size: 14pt;
 #tip-container2 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
-    margin-bottom: 40px;
+    margin: -20px 0 40px 0;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
     #tip-container2 {
         display: flex;
         width: 100%;
-        height: 600px; 
+        height: 400px; 
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;  
+        margin: 0 0 20px 0; 
+         
     }
 }
 #tip-container2 p {
     max-width: 550px;
-    line-height: 1.5;
-    text-indent: 20px;
+    line-height: 2;
     text-align: center;
     margin: 15px;
 }
@@ -694,7 +712,7 @@ font-size: 14pt;
     width: 313px;
     height: 53px;
     left: 50%;
-    transform: translate(-50%,-30%);
+    transform: translate(-50%,-10%);
     border-radius: 15px;
     background-color: #2094af;
     justify-content: center;
@@ -702,6 +720,8 @@ font-size: 14pt;
     font-size: 22px;
     font-family: montserrat;
     color: white;
+    cursor: pointer;
+    z-index: 200;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
@@ -713,6 +733,31 @@ font-size: 14pt;
         transform: translate(-50%,-90%);
     }
 }
+
+.set-up-consultation-dropdown {
+    display: flex;
+    width: 313px;
+    height: 53px;
+    border-radius: 15px;
+    background-color: #2094af;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: montserrat;
+    color: white;
+    margin: 15px 0 15px 0;
+    cursor: pointer;
+}
+/*Mobile */
+@media only screen and (max-width: 767px) {
+    .set-up-consultation-dropdown {
+        width: 250px;
+        height: 42px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+}
+
 
 /*==========================================FENCE==============================================*/
 
@@ -740,9 +785,9 @@ font-size: 14pt;
 #see-our-stuff {
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height: 1200px;
     width: 100%;
-    top: 2900px;
+    top: 3000px;
     justify-content: center;
     align-items: center;
 }
@@ -798,13 +843,13 @@ font-size: 14pt;
 /*==========================================TESIMONIALS==============================================*/
 
 #testimonials {
-    height: 800px;
+    height: 300px;
     width: 90%;
 }
 /*Mobile */
 @media only screen and (max-width: 767px) {
     #testimonials {
-        height: 400px;   
+        height: 200px;   
     }
 }
 
@@ -823,7 +868,7 @@ font-size: 14pt;
     width: 100vw;
     align-items: center;
     justify-content: center;
-    background-image: url(./ArtAssets/elements/FloristHeroBackground.png);
+    background-image: url(./ArtAssets/images/florist/WebRdy/FloralHero.png);
     background-size: cover;
     background-position: center;
 }
@@ -863,36 +908,169 @@ font-size: 14pt;
     }
 }
 
-#item-f1 {
-    background-image: url(./ArtAssets/images/florist/floristcenterpiece5.png);
-    background-position: 40% 70%;
-    background-size: 140%;
+
+
+/*=============================================DROPDOWNS===========================================*/
+
+
+/* Set default styles for dropdowns */
+.dropdown {
+    display: flex;
+    position: absolute;
+    top: -160%; /* Initially hide the dropdowns */
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    background-color: white;
+    z-index: 200;  
+    border-radius: 20px;
+    transition: top 1s ease; /* Transition for smooth movement */
+    box-shadow: 5px 5px 20px #0000005d;
 }
-#item-f2 {
-    background-image: url(./ArtAssets/images/florist/floristcenterpiece6.png);
-    background-position: 50% 70%;
-    background-size: 140%;
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 767px) {
+    .dropdown { 
+        top: -180%;
+        height: auto;
+        width: 100%;
+    }
 }
-#item-f3 {
-    background-image: url(./ArtAssets/images/florist/floristcenterpiece7.png);
-    background-position: 50% 60%;
-    background-size: 140%;
+.dropdown-header {
+    display: flex;
+    justify-content: center;
 }
-#item-f4 {
-    background-image: url(./ArtAssets/images/florist/floristcenterpiece1.JPG);
-    background-position: 40% 40%;
+.toggle-button {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    background-image: url(./ArtAssets/elements/Xicon.svg); /* Replace with your toggle button icon */
+    background-size: cover;
+    cursor: pointer;
+}
+
+.dropdown-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    height: 85%;
+    width: 100%;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+    .dropdown-contents { 
+        height: 63%;
+        width: 100%;
+        margin-top: 180px;
+    }
+}
+
+.dropdown-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .dropdown-gallery { 
+        width: 100%;
+    }
+}
+.dropdown-gallery-header {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+.dropdown-gallery-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media only screen and (max-width: 767px) {
+    .dropdown-gallery-item {
+        flex-direction: column; 
+        width: 100%;
+        height: auto;
+    }
+}
+.dropdown-image {
+    display: flex;
+    height: 300px;
+    width: 300px;
+}
+@media only screen and (max-width: 767px) {
+    .dropdown-image { 
+        height: 150px;
+        width: 100%;
+    }
+}
+.dropdown-blurb {
+    font-size: 12pt;
+}
+
+
+/*==========================================IMAGES==============================================*/
+
+
+#img-small-bouquet {
+    background-image: url(./ArtAssets/images/florist/WebRdy/SmallBouquet2.png);
     background-size: 120%;
+    background-position: 50% 15%;
 }
-#item-f5 {
-    background-image: url(./ArtAssets/images/florist/floristcenterpiece3.JPG);
-    background-position: 50% 55%;
-    background-size: 130%;
+#img-small-centerpiece {
+    background-image: url(./ArtAssets/images/florist/WebRdy/smallCenterpiece1.png);
+    background-size: 110%;
+    background-position: 50% 50%;
 }
-#item-f6 {
-    background-image: url(./ArtAssets/images/florist/floristcenterpiece4.jpg);
-    background-position: 55% 60%;
+#img-medium-centerpiece {
+    background-image: url(./ArtAssets/images/florist/WebRdy/MediumCenterpiece1.png);
+    background-size: 100%;
+    background-position: 50% 50%;
+}
+
+
+
+#img-coursages {
+    background-image: url(./ArtAssets/images/florist/WebRdy/Coursage1.png);
+    background-size: 135%;
+    background-position: 70% 53%;
+}
+@media only screen and (max-width: 767px) {
+    #img-coursages { 
+        background-size: 110%;
+        background-position: 90% 35%;
+    }
+}
+#img-boutoniere {
+    background-image: url(./ArtAssets/images/florist/Stock/boutoniere.jpg);
     background-size: 300%;
+    background-position: 65% 63%;
 }
+@media only screen and (max-width: 767px) {
+    #img-boutoniere {
+        background-image: url(./ArtAssets/images/florist/Stock/boutoniere.jpg);
+        background-size: 200%;
+        background-position: 65% 56%;
+    }
+}
+#img-custom {
+    background-image: url(./ArtAssets/images/florist/Custom/custom1.png);
+    background-size: 170%;
+    background-position: 40% 63%;
+}
+@media only screen and (max-width: 767px) {
+    #img-custom {
+        background-image: url(./ArtAssets/images/florist/Custom/custom1.png);
+        background-size: 150%;
+        background-position: 40% 53%;
+    }
+}
+
 
 /*==========================================CONTACT==============================================*/
 
@@ -904,30 +1082,8 @@ font-size: 14pt;
 /*Mobile */
 @media only screen and (max-width: 767px) {
     #contact { 
-        
+        margin-top: 100px;        
     }
 } 
 
-/*==========================================Merch==============================================*/
 
-#store-container {
-    display: flex;
-    width: 100%;
-    height: 75vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-/*Mobile */
-@media only screen and (max-width: 767px) {
-    #store-container {
-        margin-top: 130px; 
-       height: auto;  
-       width: 95%;
-    }
-} 
-
-#store-empty {
-    height: 30%;
-    width: 30%;
-}
