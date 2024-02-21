@@ -90,7 +90,7 @@ header {
     z-index: 9999;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     header {
         height: 175px;
         width: 100%;
@@ -115,13 +115,13 @@ header {
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #header-contents {
         display: none;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #header-contents-mobile {
         width: 100%;
     }
@@ -170,7 +170,7 @@ nav a:active {
     color: #155d19;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #nav1 {
         display: none;
     }
@@ -179,7 +179,7 @@ nav a:active {
     display: none;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #header-contents-mobile {
         display: flex;
         justify-content: center;
@@ -187,7 +187,7 @@ nav a:active {
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #header-contents-mobile img {
         position: absolute;
         height: 75%;
@@ -296,7 +296,7 @@ footer div {
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #moose-footer-gardening {
         bottom: -284%;
     }
@@ -335,7 +335,7 @@ main {
 }
 
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     main {
         max-width: 400px;
     }
@@ -414,7 +414,7 @@ main {
     justify-content: center;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #hero {
         height: 100vh;
     }
@@ -429,7 +429,7 @@ main {
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #hero-intro {
         display: none;
     }
@@ -438,7 +438,7 @@ main {
     display: none;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #hero-intro-mobile {
         display: flex;
         height: 130px;
@@ -455,7 +455,7 @@ main {
 }
 
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #hero-content {
         flex-direction: column;
         height: 60%; 
@@ -475,7 +475,7 @@ main {
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #hero-content img {
         height: 240px;  
         margin: -10px;       
@@ -522,7 +522,7 @@ font-size: 14pt;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #value-propositions {
         display: none;
     }
@@ -531,7 +531,7 @@ font-size: 14pt;
     display: none;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #value-propositions-mobile {
         display: flex;
         flex-direction: column;
@@ -557,7 +557,7 @@ font-size: 14pt;
     width: 350px;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #value-propositions img {
         display: none;
     }
@@ -595,7 +595,7 @@ font-size: 14pt;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     .content-container {
         flex-direction: column-reverse;
         width: 90%;
@@ -692,7 +692,7 @@ font-size: 14pt;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #gardening-hero {
         height: 37vh;
         top: 25%;
@@ -771,14 +771,14 @@ font-size: 14pt;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #expert-tip {
         width: 90%;
         height: 450px;   
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #tip-container1 {
         margin: 30px 0 0 0;
         justify-content: center;
@@ -792,7 +792,7 @@ font-size: 14pt;
     margin: -10px 0 40px 0;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #tip-container2 {
         display: flex;
         width: 100%;
@@ -815,13 +815,13 @@ font-size: 14pt;
     margin-left: 50px;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #flower-bucket {
         height: 220px;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #flower-bucket {
         height: 140px;
         width: 180px;
@@ -852,7 +852,7 @@ font-size: 14pt;
     z-index: 200;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     .set-up-consultation {
         width: 250px;
         height: 42px;
@@ -975,7 +975,7 @@ font-size: 14pt;
     width: 90%;
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #testimonials {
         height: 300px;   
     }
@@ -1009,7 +1009,7 @@ font-size: 14pt;
     }
 }
 /*Mobile */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     #florist-hero {
         height: 40vh;
         top: 25%;
@@ -1105,7 +1105,7 @@ font-size: 14pt;
         margin-top: 100px;
     }
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 420px) {
     .dropdown-contents { 
         height: 63%;
         width: 100%;
