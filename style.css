@@ -1260,34 +1260,32 @@ font-size: 14pt;
 
 #img-coursages {
     background-image: url(./ArtAssets/images/florist/WebRdy/Coursage1.png);
-    background-size: 120%;
-    background-position: 75% 53%;
+    background-size: 110%;
+    background-position: 75% 45%;
 }
 #img-boutonniere {
     background-image: url(./ArtAssets/images/florist/Stock/boutoniere.jpg);
-    background-size: 200%;
-    background-position: 65% 63%;
+    background-size: 180%;
+    background-position: 70% 65%;
 }
 #img-custom {
     background-image: url(./ArtAssets/images/florist/Custom/custom1.png);
     background-size: 140%;
-    background-position: 40% 53%;
+    background-position: 40% 03%;
 }
 
 @media only screen and (max-width: 767px) {
     #img-coursages { 
-        background-size: 110%;
-        background-position: 90% 35%;
+        background-size: 100%;
+        background-position: 90% 52%;
     }
-#img-boutoniere {
-        background-image: url(./ArtAssets/images/florist/Stock/boutoniere.jpg);
-        background-size: 200%;
-        background-position: 65% 56%;
+    #img-boutonniere {
+        background-size: 140%;
+        background-position: 80% 62%;
     }
-#img-custom {
-        background-image: url(./ArtAssets/images/florist/Custom/custom1.png);
-        background-size: 150%;
-        background-position: 40% 53%;
+    #img-custom {
+        background-size: 100%;
+        background-position: 40% 4%;
     }
 }
 
