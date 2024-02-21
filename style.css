@@ -694,10 +694,18 @@ font-size: 14pt;
 /*Mobile */
 @media only screen and (max-width: 500px) {
     #gardening-hero {
+        height: 32vh;
+        top: 17%;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
+    #gardening-hero {
         height: 37vh;
         top: 25%;
     }
 }
+
 #gardening-hero-content {
     display: flex;
     position: absolute;
@@ -1010,6 +1018,14 @@ font-size: 14pt;
 }
 /*Mobile */
 @media only screen and (max-width: 500px) {
+    #florist-hero {
+        height: 40vh;
+        top: 17%;
+        background-position: 56%;
+    }
+}
+/*Mobile */
+@media only screen and (max-width: 390px) {
     #florist-hero {
         height: 40vh;
         top: 25%;
