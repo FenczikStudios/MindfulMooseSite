@@ -86,10 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Function to handle click event and redirect to contact page
 function redirectToContactPage() {
-    function handleClick() {
-        window.location.href = "contact.html";
+    function handleClick(event) {
+        event.preventDefault(); // Prevents the default behavior of the link
+        window.open("https://us18.list-manage.com/contact-form?u=fc81299908c9a33a63dbf5b05&form_id=4a6595251c73a41082b6a61cb5387301", "_blank");
     }
 
     var elements = document.querySelectorAll('.set-up-consultation, .set-up-consultation-dropdown');
@@ -98,6 +98,7 @@ function redirectToContactPage() {
         element.addEventListener('click', handleClick);
     });
 }
+
 
 // Function to scroll to the top of the page
 function scrollToTop() {

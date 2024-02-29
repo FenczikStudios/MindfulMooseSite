@@ -292,13 +292,13 @@ footer div {
 /*Mobile */
 @media only screen and (max-width: 850px) {
     #moose-footer-gardening {
-        bottom: -535%;
+        bottom: -1850PX;
     }
 }
 /*Mobile */
 @media only screen and (max-width: 500px) {
     #moose-footer-gardening {
-        bottom: -1840px;
+        bottom: -1880px;
     }
 }
 #moose-footer-contact {
