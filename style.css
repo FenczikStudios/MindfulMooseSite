@@ -290,6 +290,12 @@ footer div {
     bottom: -130%;
 }
 /*Mobile */
+@media only screen and (max-width: 2550px) {
+    #moose-footer-gardening {
+        bottom: -1850PX;
+    }
+}
+/*Mobile */
 @media only screen and (max-width: 850px) {
     #moose-footer-gardening {
         bottom: -1850PX;
@@ -327,12 +333,6 @@ main {
     padding: 0; 
 }
 
-/*Tablet */
-@media only screen and (max-width: 1199px) and (min-width: 768px) {
-    main {
-
-    }
-}
 
 /*Mobile */
 @media only screen and (max-width: 500px) {
